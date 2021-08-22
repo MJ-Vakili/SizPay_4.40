@@ -1,6 +1,8 @@
 # SizPay_4.40
 درگاه پرداخت فروشگاه ساز ناپ کامرس - سیزپی
 
-برنامه نویسی توسط nopfarsi.ir
+برنامه نویسی توسط :
 
-<a href="http://nopfarsi.ir">ناپ فارسی</a>
+nopfarsi.ir
+
+<a href="http://nopfarsi.ir">ناپ کامرس</a>
