@@ -1,0 +1,322 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Copyright>Copyright © nopfarsi.ir</Copyright>
+		<Company>nopfarsi.ir</Company>
+		<Authors>nopfarsi.ir</Authors>
+		<PackageLicenseUrl></PackageLicenseUrl>
+		<PackageProjectUrl>https://www.nopfarsi.ir</PackageProjectUrl>
+		<RepositoryUrl>nopfarsi.ir</RepositoryUrl>
+		<RepositoryType>nopfarsi.ir</RepositoryType>
+		<OutputPath>D:\E-Commerce\2-SourceCode4_4\nopCommerce_4.40.3_NoSource_win_x64\Plugins\NopFarsi.Payment.SizPay</OutputPath>
+		<OutDir>$(OutputPath)</OutDir>
+		<!--Set this parameter to true to get the dlls copied from the NuGet cache to the output of your project.
+    You need to set this parameter to true if your plugin has a nuget package
+    to ensure that the dlls copied from the NuGet cache to the output of your project-->
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+		<AssemblyName>NopFarsi.Payment.SizPay</AssemblyName>
+		<RootNamespace>NopFarsi.Payment.SizPay</RootNamespace>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="1-Docs\**" />
+		<Compile Remove="1-Doc\**" />
+		<Compile Remove="2-Library\**" />
+		<Compile Remove="Contents\**" />
+		<Compile Remove="Content\**" />
+		<Compile Remove="Data\**" />
+		<EmbeddedResource Remove="1-Docs\**" />
+		<EmbeddedResource Remove="1-Doc\**" />
+		<EmbeddedResource Remove="2-Library\**" />
+		<EmbeddedResource Remove="Contents\**" />
+		<EmbeddedResource Remove="Content\**" />
+		<EmbeddedResource Remove="Data\**" />
+		<None Remove="1-Docs\**" />
+		<None Remove="1-Doc\**" />
+		<None Remove="2-Library\**" />
+		<None Remove="Contents\**" />
+		<None Remove="Content\**" />
+		<None Remove="Data\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Controllers\NopFarsiCustomerValidationController2.cs" />
+	  <Compile Remove="Controllers\NopfarsiSmsController.cs" />
+	  <Compile Remove="Service\KavenegarSmsService.cs" />
+	  <Compile Remove="Service\SabanovinService.cs" />
+	  <Compile Remove="Service\SmsIr2Service.cs" />
+	  <Compile Remove="Service\SmsIrService.cs" />
+	  <Compile Remove="Service\smsmarkaziService.cs" />
+	  <Compile Remove="Service\UtabSmsService.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="logo.jpg" />
+		<None Remove="plugin.json" />
+		<None Remove="Scripts\jquery.nivo.slider.js" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="logo.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="plugin.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Views\_ViewImports.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.proj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Components\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="FluentMigrator">
+			<HintPath>2-Library\FluentMigrator.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="FluentValidation">
+			<HintPath>2-Library\FluentValidation.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Html.Abstractions">
+		  <HintPath>2-Library\Microsoft.AspNetCore.Html.Abstractions.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Http">
+		  <HintPath>2-Library\Microsoft.AspNetCore.Http.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+			<HintPath>2-Library\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Http.Features">
+			<HintPath>2-Library\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc.Core">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc.Razor">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.Razor.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc.ViewFeatures">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.ViewFeatures.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Razor">
+		  <HintPath>2-Library\Microsoft.AspNetCore.Razor.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Routing">
+		  <HintPath>2-Library\Microsoft.AspNetCore.Routing.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Routing.Abstractions">
+		  <HintPath>2-Library\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.Configuration">
+			<HintPath>2-Library\Microsoft.Extensions.Configuration.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+			<HintPath>2-Library\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.DependencyInjection">
+			<HintPath>2-Library\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+			<HintPath>2-Library\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.Options">
+		  <HintPath>2-Library\Microsoft.Extensions.Options.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.Primitives">
+			<HintPath>2-Library\Microsoft.Extensions.Primitives.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+		  <HintPath>2-Library\Newtonsoft.Json.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json.Bson">
+		  <HintPath>2-Library\Newtonsoft.Json.Bson.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="Nop.Core">
+			<HintPath>2-Library\Nop.Core.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Nop.Data">
+			<HintPath>2-Library\Nop.Data.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Nop.Services">
+			<HintPath>2-Library\Nop.Services.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Nop.Web">
+			<HintPath>2-Library\Nop.Web.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Nop.Web.Framework">
+			<HintPath>2-Library\Nop.Web.Framework.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="System.Net.Http.Formatting">
+		  <HintPath>2-Library\System.Net.Http.Formatting.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="System.Private.ServiceModel">
+		  <HintPath>2-Library\System.Private.ServiceModel.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="System.ServiceModel">
+		  <HintPath>2-Library\System.ServiceModel.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+		<Reference Include="System.ServiceModel.Primitives">
+		  <HintPath>2-Library\System.ServiceModel.Primitives.dll</HintPath>
+		  <Private>false</Private>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Scripts\kendo.all.min.js">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Scripts\kendo.ui.core.min.js">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Script\jquery.maskedinput.min.js">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Script\login-register.min.js">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\AdminTabStripContentProduct.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\BulkEdit.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Configuration.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Configure.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\CustomerNopFarsiIR\Info.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\CustomerNopFarsiIR\Register.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Error.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\Login.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\NopFarsiRegister.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\RegistrationVerification.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\_ExternalAuthentication.Errors.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiOtp\Index.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Pay.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentInfo.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentInformation.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\Configure.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\Error.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\Pay.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\PaymentInfo.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\PaymentResult.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMelli\Configure.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMelli\Error.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMelli\Pay.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMelli\PaymentInfo.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\ProductDetailFormulViewComponent.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\StaticValue.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Verify.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\_AdminLayout.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\_AdminPopupLayout.cshtml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\_GridPagerMessages.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <WCFMetadata Include="Connected Services" />
+	</ItemGroup>
+
+	<!-- This target execute after "Build" target -->
+	<Target Name="NopTarget" AfterTargets="Build">
+		<!-- Delete unnecessary libraries from plugins path -->
+		<!--<MSBuild Projects="@(ClearPluginAssemblies)" Properties="PluginPath=$(MSBuildProjectDirectory)\$(OutDir)" Targets="NopClear" />-->
+	</Target>
+</Project>
